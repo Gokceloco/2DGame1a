@@ -21,7 +21,7 @@ public class MapGenerator : MonoBehaviour
             PassTurn();
         }
     }
-    private void Start()
+    public void Init()
     {
         StartCoroutine(GeneratePiecesCoroutine());
     }
@@ -30,8 +30,8 @@ public class MapGenerator : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(3);
             PassTurn();
+            yield return new WaitForSeconds(3);            
         }
     }
 

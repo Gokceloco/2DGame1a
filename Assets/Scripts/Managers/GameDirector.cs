@@ -8,6 +8,8 @@ public class GameDirector : MonoBehaviour
     public GridManager gridManager;
     public MapGenerator mapGenerator;
 
+    public Player player;
+
     void Start()
     {
         Init();
@@ -21,5 +23,7 @@ public class GameDirector : MonoBehaviour
     private void StartGame()
     {
         gridManager.CreateGrid();
+        mapGenerator.Init();
+        player.Init();
     }
 }
